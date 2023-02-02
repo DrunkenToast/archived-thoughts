@@ -1,0 +1,52 @@
+---
+const links = [
+    {title: 'Posts', url: '/'},
+    {title: 'Tags', url: '/tags/'},
+]
+---
+<nav>
+    <a href='/'>Home</a>
+    <ul>
+        {
+        links.map(link => 
+            <li>
+                <a href={link.url}>{link.title}</a>
+            </li>
+        )
+        }
+        <li>
+            <a></a>
+        </li>
+    </ul>
+</nav>
+<script>
+    
+</script>
+<style>
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav:first-child {
+        color: var(--green)
+    }
+
+    nav ul {
+        margin: 0;
+
+        display: flex;
+        list-style: none;
+    }
+    
+    nav a {
+        display: inline-block;
+        padding: 0.5em;
+        text-decoration: none;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+</style>

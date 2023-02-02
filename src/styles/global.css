@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Poppins&family=Raleway&display=swap');
+
+:root {
+    /* color palette 
+    * Gruvbox community color palette:
+    * https://github.com/gruvbox-community/gruvbox
+    * */
+    --bg0_h: #1d2021;
+    --bg0: #282828;
+    --bg1: #3c3836;
+    --bg2: #504945;
+    --bg3: #665c54;
+    --bg4: #7c6f64;
+
+    --fg0: #fbf1c7;
+    --fg1: #ebdbb2;
+    --fg2: #d5c4a1;
+    --fg3: #bdae93;
+    --fg4: #a89984;
+
+    --red: #fb4934;
+    --green: #b8bb26;
+    --yellow: #fabd2f;
+    --orange: #fe8019;
+    --blue: #83a598;
+    --purple: #d3869b;
+    --aqua: #8ec07c;
+
+    /* Utils */
+    --dyn-padding: calc(max(min(2vw, 9em), 1em));
+
+    /* Main theme */
+    --color-bg: var(--bg0);
+    --color-bg-secondary: var(--bg0_h);
+    --color-text: var(--fg0);
+    --color-text-inactive: var(--fg4);
+    --color-accent: var(--green);
+    --color-accent-secondary: var(--orange);
+
+    --border-small: 6px;
+    --border-medium: 8px;
+    --border-big: 16px;
+
+    /* Fonts */
+    --font-heading: "Raleway", sans-serif;
+    --font-normal: "Poppins", sans-serif;
+    --font-mono: 'Fira Code', monospace;
+}
+
+.light-theme {
+    /* Light theme */
+    --color-bg: var(--fg0);
+    --color-bg-secondary: var(--fg2);
+    --color-text: var(--bg0);
+    --color-text-inactive: var(--bg2);
+    --color-accent: var(--green);
+    --color-accent-secondary: var(--orange);
+}
+
+hr {
+    color: var(--color-text);
+}
+
+html {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Raleway", sans-serif;
+}
+
+a {
+    color: var(--blue);
+}
+
+main {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--dyn-padding);
+    padding-right: var(--dyn-padding);
+}
+
+blockquote {
+    color: var(--color-text-inactive);
+    background-color: var(--color-bg-secondary);
+    border-left: 5px solid var(--color-text-inactive);
+    border-radius: 0 var(--border-medium) var(--border-medium) 0px;
+    margin: 1em 0em;
+    padding: 0.1em 1em;
+}
+
+table, th, td {
+    border: 2px solid var(--color-text-inactive);
+    border-collapse: collapse;
+    padding: 0.3rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Inline code and code block styling */
+code {
+    padding: 4px;
+    border-radius: 4px;
+    background: var(--color-bg-secondary);
+    font-family: Consolas, Monaco, "Andale Mono", monospace;
+    direction: ltr;
+    font-size: 14px;
+}
+
+pre {
+    margin: 4px;
+    padding: 8px 16px;
+    overflow: auto;
+    border-radius: var(--border-medium);
+    /* Dark, regardless of theme */
+    background-color: var(--bg0_h) !important;
+}
+pre > code {
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    display: block;
+    font-size: 14px;
+    line-height: 1.5;
+    word-break: normal;
+    white-space: pre;
+    word-spacing: normal;
+    tab-size: 4;
+}

@@ -1,0 +1,19 @@
+---
+import BaseLayout from "../layouts/base-layout.astro";
+import PostListing from "../components/post-listing.astro";
+
+const allPosts = await Astro.glob("./posts/**/*.md");
+const posts = allPosts
+    .filter((post) => !post.frontmatter.draft)
+    .sort(
+        (a, b) =>
+            new Date(b.frontmatter.date).getTime() -
+            new Date(a.frontmatter.date).getTime()
+    );
+
+const title = "Posts";
+---
+<BaseLayout title={title}>
+    <h1>{title}</h1>
+    {posts.map((post) => <PostListing post={post} />)}
+</BaseLayout>

@@ -1,0 +1,60 @@
+---
+import BaseLayout from "../layouts/base-layout.astro";
+import Pill from "../components/tag-pill.astro";
+
+const { frontmatter } = Astro.props;
+console.log(frontmatter.lastmod)
+---
+
+<BaseLayout title={frontmatter.title}>
+    <h1>{frontmatter.title}</h1>
+    <ul>
+        {frontmatter.author && <li>{frontmatter.author}</li>}
+        <li>
+            {frontmatter.date.slice(0, 10)}
+            {
+            frontmatter.lastmod ?
+                ` (last updated on ${frontmatter.lastmod.slice(0, 10)})` 
+                : ''
+            }
+        </li>
+        {
+            frontmatter.tags && frontmatter.tags.length && (
+                <li>
+                    {(frontmatter.tags as string[]).map((tag) => (
+                        <Pill tag={tag} />
+                    ))}
+                </li>
+            )
+        }
+    </ul>
+    <hr />
+    <slot />
+</BaseLayout>
+<style>
+    ul {
+        list-style: none;
+        display: inline;
+        padding: 0;
+    }
+
+    li {
+        display: inline;
+    }
+
+    li:first-child {
+        font-weight: bold;
+    }
+
+    li::after {
+        content: " • ";
+    }
+
+    li:last-child::after {
+        content: "";
+    }
+
+    hr {
+        margin: 1em 0em;
+    }
+</style>
