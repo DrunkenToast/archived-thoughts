@@ -44,7 +44,7 @@ This **is** ~~not~~ a _sentence_ with **_formatting_**.
 
 > :bulb: **Tip:** Remember to appreciate the little things in life.
 
-[Check out all the emoji's](/posts/emojis)
+[Check out all the emoji's](emojis)
 
 > Rock and stone!
 
@@ -80,4 +80,8 @@ printWords(s)
 | Item1.2 | Item2.2 | Item3.2 |
 | Item1.3 | Item2.3 | Item3.3 |
 
-![The moon](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.pexels.com%2Fphotos%2F47367%2Ffull-moon-moon-bright-sky-47367.jpeg%3Fcs%3Dsrgb%26dl%3Dsky-space-moon-astronomy-47367.jpg%26fm%3Djpg&f=1&nofb=1&ipt=4244809d84d9bb1dd9cb08284ed3364db20cd064dcba30d56d6927a0cd547425&ipo=images)
+![Small heart](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.pixabay.com%2Fphoto%2F2017%2F09%2F23%2F16%2F33%2Fpixel-heart-2779422__180.png&f=1&nofb=1&ipt=697a0bdc8b439cddc2a3b4e584a47feb5830a933a583192a3357b6c53bc772ae&ipo=images)
+
+<img alt="Fixed sized image of the moon" width="500px" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.pexels.com%2Fphotos%2F47367%2Ffull-moon-moon-bright-sky-47367.jpeg%3Fcs%3Dsrgb%26dl%3Dsky-space-moon-astronomy-47367.jpg%26fm%3Djpg&f=1&nofb=1&ipt=4244809d84d9bb1dd9cb08284ed3364db20cd064dcba30d56d6927a0cd547425&ipo=images"/>
+
+![Full sized imaged of the moon](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.pexels.com%2Fphotos%2F47367%2Ffull-moon-moon-bright-sky-47367.jpeg%3Fcs%3Dsrgb%26dl%3Dsky-space-moon-astronomy-47367.jpg%26fm%3Djpg&f=1&nofb=1&ipt=4244809d84d9bb1dd9cb08284ed3364db20cd064dcba30d56d6927a0cd547425&ipo=images)

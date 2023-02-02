@@ -1,5 +1,7 @@
 # Archived thoughts
 
+[Demo deployment](https://drunkentoast.github.io/archived-thoughts/)
+
 ## Commands
 
 All commands are run from the root of the project, from a terminal:

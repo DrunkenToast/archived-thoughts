@@ -1,11 +1,11 @@
 ---
 const links = [
-    {title: 'Posts', url: '/'},
-    {title: 'Tags', url: '/tags/'},
+    {title: 'Posts', url: `${import.meta.env.BASE_URL}`},
+    {title: 'Tags', url: `${import.meta.env.BASE_URL}tags/`},
 ]
 ---
 <nav>
-    <a href='/'>Home</a>
+    <a href=`${import.meta.env.BASE_URL}`>Home</a>
     <ul>
         {
         links.map(link => 
