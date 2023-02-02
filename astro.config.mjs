@@ -5,6 +5,8 @@ import gruvboxDarkMedium from "./gruvbox-dark-medium.json"
 
 // https://astro.build/config
 export default defineConfig({
+    site: 'https://drunkentoast.github.io',
+    base: 'archived-thoughts',
     markdown: {
         shikiConfig: {
             theme: {
