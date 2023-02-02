@@ -1,6 +1,6 @@
 ---
-import BaseLayout from "../layouts/base-layout.astro";
-import PostListing from "../components/post-listing.astro";
+import BaseLayout from "@layouts/base-layout.astro";
+import PostListing from "@components/post-listing.astro";
 
 const allPosts = await Astro.glob("./posts/**/*.md");
 const posts = allPosts

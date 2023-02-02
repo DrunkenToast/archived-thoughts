@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/markdown-layout.astro"
+layout: "@layouts/markdown-layout.astro"
 title: "All the emojis"
 date: 2023-02-02
 lastmod: 2023-02-02

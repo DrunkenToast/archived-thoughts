@@ -11,6 +11,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^2.0.2"
+    "astro": "^2.0.2",
+    "remark-code-titles": "^0.1.2",
+    "remark-gemoji": "^7.0.1",
+    "remark-toc": "^8.0.1"
   }
 }

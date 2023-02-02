@@ -1,7 +1,7 @@
 ---
 import type { MarkdownInstance } from "astro";
-import BaseLayout from "../../layouts/base-layout.astro";
-import PostListing from "../../components/post-listing.astro";
+import BaseLayout from "@layouts/base-layout.astro";
+import PostListing from "@components/post-listing.astro";
 
 export interface Props {
     posts: MarkdownInstance<Record<string, any>>[];

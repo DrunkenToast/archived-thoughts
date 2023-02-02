@@ -15,12 +15,23 @@ const links = [
         )
         }
         <li>
-            <a></a>
+            <a class="theme">Theme</a>
         </li>
     </ul>
 </nav>
 <script>
-    
+    import {toggleTheme, setTheme} from '@scripts/theme'
+
+    const switcher = document.querySelector('a.theme')!;
+
+    const setText = (theme: string) => 
+        switcher.innerHTML = (theme == 'light' ? 'Dark' : 'Light') + ' mode';
+
+    setText(setTheme())
+
+    switcher.addEventListener('click', () => {
+        setText(toggleTheme())
+    })
 </script>
 <style>
     nav {
@@ -44,6 +55,7 @@ const links = [
         display: inline-block;
         padding: 0.5em;
         text-decoration: none;
+        cursor: pointer;
     }
 
     nav a:hover {
