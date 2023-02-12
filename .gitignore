@@ -1,3 +1,5 @@
+src/pages/posts
+
 # build output
 dist/
 

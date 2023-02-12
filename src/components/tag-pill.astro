@@ -5,7 +5,7 @@ export interface Props {
 
 const { tag } = Astro.props;
 ---
-<a href={`${import.meta.env.BASE_URL}tags/` + tag}>
+<a href={`${import.meta.env.BASE_URL}tags/` + tag.toLowerCase()}>
 {tag}
 </a>
 

@@ -2,26 +2,17 @@
 import type { MarkdownInstance } from "astro";
 import BaseLayout from "@layouts/base-layout.astro";
 import PostListing from "@components/post-listing.astro";
+import { getAllPosts, getAllTags, filterPostsByTag } from "@utils/common";
 
 export interface Props {
     posts: MarkdownInstance<Record<string, any>>[];
 }
 
 export async function getStaticPaths() {
-    const posts = await Astro.glob("../posts/*.md");
-    const tags = [
-        ...new Set(posts.map((post) => post.frontmatter.tags).flat()),
-    ];
-
+    const posts = await getAllPosts();
+    const tags = await getAllTags();
     return tags.map((tag) => {
-        const filteredPosts = posts
-            .filter((post) => post.frontmatter.tags.includes(tag))
-            .sort(
-                (a, b) =>
-                    new Date(b.frontmatter.date).getTime() -
-                    new Date(a.frontmatter.date).getTime()
-            );
-
+        const filteredPosts = filterPostsByTag(posts, tag)
         return {
             params: { tag },
             props: { posts: filteredPosts },
@@ -31,11 +22,14 @@ export async function getStaticPaths() {
 
 const { tag } = Astro.params;
 const { posts } = Astro.props;
+    console.log(posts)
 ---
 
 <BaseLayout title={`Tag '${tag}'`}>
     <h1>Posts tagged with <span>{tag}</span></h1>
-    {posts.map((post) => <PostListing post={post} />)}
+    {
+    posts.map((post) => <PostListing post={post} />)
+    }
 </BaseLayout>
 <style>
     span {

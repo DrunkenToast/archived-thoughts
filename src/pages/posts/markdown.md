@@ -2,7 +2,7 @@
 layout: "@layouts/markdown-layout.astro"
 title: "Markdown example"
 date: 2023-02-01
-lastmod: 2023-01-02
+lastmod: 2023-02-02
 draft: false
 author: "Peter"
 tags:
@@ -29,8 +29,11 @@ tags:
 1. with items
 1. breaking the order
 
--   [ ] Checkboxes
--   [x] Checked!
+- [ ] Checkboxes
+    - [ ] :/
+    - [x] :D
+- [x] Checked!
+    - All done!
 
 This **is** ~~not~~ a _sentence_ with **_formatting_**.
 
@@ -44,12 +47,11 @@ This **is** ~~not~~ a _sentence_ with **_formatting_**.
 
 > :bulb: **Tip:** Remember to appreciate the little things in life.
 
-[Check out all the emoji's](emojis)
+[Check out all the emoji's](./emojis)
 
 > Rock and stone!
 
 \- Dwarf ([source](#header-6))
-
 
 ---
 

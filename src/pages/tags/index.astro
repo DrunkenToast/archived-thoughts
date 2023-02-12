@@ -1,18 +1,10 @@
 ---
 import BaseLayout from "@layouts/base-layout.astro";
+import { getAllTags } from "@utils/common"
 
 const title = "Tags";
 
-const allPosts = await Astro.glob("../posts/**/*.md");
-const posts = allPosts.filter((post) => !post.frontmatter.draft);
-const tags = [
-    ...new Set(
-        posts
-            .map((post) => post.frontmatter.tags)
-            .flat()
-            .sort()
-    ),
-];
+const tags = await getAllTags();
 ---
 
 <BaseLayout title={title}>

@@ -3,7 +3,6 @@ import BaseLayout from "@layouts/base-layout.astro";
 import Pill from "@components/tag-pill.astro";
 
 const { frontmatter } = Astro.props;
-console.log(frontmatter.lastmod)
 ---
 
 <BaseLayout title={frontmatter.title}>
@@ -13,9 +12,9 @@ console.log(frontmatter.lastmod)
         <li>
             {frontmatter.date.slice(0, 10)}
             {
-            frontmatter.lastmod ?
-                ` (last updated on ${frontmatter.lastmod.slice(0, 10)})` 
-                : ''
+                frontmatter.lastmod
+                    ? ` (last updated on ${frontmatter.lastmod.slice(0, 10)})`
+                    : ""
             }
         </li>
         {
