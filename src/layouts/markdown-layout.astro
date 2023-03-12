@@ -6,18 +6,19 @@ const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout title={frontmatter.title}>
-    <h1>{frontmatter.title}</h1>
-    <ul>
-        {frontmatter.author && <li>{frontmatter.author}</li>}
-        <li>
-            {frontmatter.date.slice(0, 10)}
-            {
+    <div>
+        <h1>{frontmatter.title}</h1>
+        <ul>
+            {frontmatter.author && <li>{frontmatter.author}</li>}
+            <li>
+                {frontmatter.date.slice(0, 10)}
+                {
                 frontmatter.lastmod
                     ? ` (last updated on ${frontmatter.lastmod.slice(0, 10)})`
                     : ""
-            }
-        </li>
-        {
+                }
+            </li>
+            {
             frontmatter.tags && frontmatter.tags.length && (
                 <li>
                     {(frontmatter.tags as string[]).map((tag) => (
@@ -25,10 +26,11 @@ const { frontmatter } = Astro.props;
                     ))}
                 </li>
             )
-        }
-    </ul>
-    <hr />
-    <slot />
+            }
+        </ul>
+        <hr />
+        <slot />
+    </div>
 </BaseLayout>
 <style>
     ul {

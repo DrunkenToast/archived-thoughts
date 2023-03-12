@@ -139,7 +139,6 @@ pre {
     border-radius: var(--border-medium);
     /* Dark, regardless of theme */
     background-color: var(--bg0_h) !important;
-    border: 1px solid var(--bg4);
     counter-reset: line;
 }
 
@@ -163,7 +162,6 @@ pre > code {
     padding: 4px;
     width: fit-content;
     border-radius: var(--border-medium) var(--border-medium) 0 0;
-    border: 1px solid var(--bg4);
     border-bottom: 0;
 }
 

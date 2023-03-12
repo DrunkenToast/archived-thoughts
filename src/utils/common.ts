@@ -22,7 +22,7 @@ export async function getAllTags() {
         ...new Set(
             posts
                 .map((post) =>
-                    post.frontmatter.tags.map((tag: string) =>
+                    post.frontmatter.tags?.map((tag: string) =>
                         tag.toLowerCase()
                     )
                 )
